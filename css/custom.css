@@ -56,11 +56,59 @@ a {
     height: auto;
 }
 
+.customHC{
+    border-color: #8B1D42;
+    color: #ffffff;
+}
+
+.customNCS{
+	border-color: #63339F;
+    color: #ffffff;
+}
+
+.customMDW{
+	border-color: #F3B24A;
+    color: #ffffff;
+}
+
+.customUPN{
+	border-color: #0D5201;
+    color: #ffffff;
+}
+
 .custom4:hover{
     background-color: #324158;
     border-color: #41b6e6;
     color: #ffffff;
     box-shadow: 0 0 10px #41b6e6;   
+}
+
+.customHC:hover{
+	background-color: #8B1D42;
+    border-color: #8B1D42;
+    color: #ffffff;
+    box-shadow: 0 0 10px #8B1D42;
+}
+
+.customNCS:hover{
+	background-color: #63339F;
+    border-color: #63339F;
+    color: #ffffff;
+    box-shadow: 0 0 10px #63339F;
+}
+
+.customMDW:hover{
+	background-color: #F3B24A;
+    border-color: #F3B24A;
+    color: #ffffff;
+    box-shadow: 0 0 10px #F3B24A;
+}
+
+.customUPN:hover{
+	background-color: #0D5201;
+    border-color: #0D5201;
+    color: #ffffff;
+    box-shadow: 0 0 10px #0D5201;
 }
 
 .backbtn{
