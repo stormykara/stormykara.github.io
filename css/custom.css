@@ -76,6 +76,11 @@ a {
     color: #ffffff;
 }
 
+.customUPW{
+	border-color: #FFB2B9;
+    color: #ffffff;
+}
+
 .custom4:hover{
     background-color: #324158;
     border-color: #41b6e6;
@@ -109,6 +114,13 @@ a {
     border-color: #0D5201;
     color: #ffffff;
     box-shadow: 0 0 10px #0D5201;
+}
+
+.customUPW:hover{
+	background-color: #FFB2B9;
+    border-color: #FFB2B9;
+    color: #ffffff;
+    box-shadow: 0 0 10px #FFB2B9;
 }
 
 .backbtn{
