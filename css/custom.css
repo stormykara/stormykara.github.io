@@ -81,6 +81,16 @@ a {
     color: #ffffff;
 }
 
+.customSWS{
+	border-color: #005FB9;
+    color: #ffffff;
+}
+
+.customMDN{
+	border-color: #EA7200;
+    color: #ffffff;
+}
+
 .custom4:hover{
     background-color: #324158;
     border-color: #41b6e6;
@@ -121,6 +131,20 @@ a {
     border-color: #FFB2B9;
     color: #ffffff;
     box-shadow: 0 0 10px #FFB2B9;
+}
+
+.customSWS:hover{
+	background-color: #005FB9;
+    border-color: #005FB9;
+    color: #ffffff;
+    box-shadow: 0 0 10px #005FB9;
+}
+
+.customMDN:hover{
+	background-color: #EA7200;
+    border-color: #EA7200;
+    color: #ffffff;
+    box-shadow: 0 0 10px #EA7200;
 }
 
 .backbtn{
