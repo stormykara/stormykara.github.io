@@ -91,6 +91,11 @@ a {
     color: #ffffff;
 }
 
+.customRI{
+	border-color: #E0261D;
+    color: #ffffff;
+}
+
 .custom4:hover{
     background-color: #324158;
     border-color: #41b6e6;
@@ -145,6 +150,13 @@ a {
     border-color: #EA7200;
     color: #ffffff;
     box-shadow: 0 0 10px #EA7200;
+}
+
+.customRI:hover{
+	background-color: #E0261D;
+    border-color: #E0261D;
+    color: #ffffff;
+    box-shadow: 0 0 10px #E0261D;
 }
 
 .backbtn{
