@@ -96,11 +96,30 @@ a {
     color: #ffffff;
 }
 
+.customUPNW{
+	border-color: #FFDE02;
+    color: #ffffff;
+}
+
 .custom4:hover{
     background-color: #324158;
     border-color: #41b6e6;
     color: #ffffff;
     box-shadow: 0 0 10px #41b6e6;   
+}
+
+.customPP:hover{
+	background-color: #2D4184;
+    border-color: #ffffff;
+    color: #ffffff;
+    box-shadow: 0 0 10px #2D4184;  
+}
+
+.customKOFI:hover{
+	background-color: #D95151;
+    border-color: #ffffff;
+    color: #ffffff;
+    box-shadow: 0 0 10px #D95151;  
 }
 
 .customHC:hover{
@@ -157,6 +176,13 @@ a {
     border-color: #E0261D;
     color: #ffffff;
     box-shadow: 0 0 10px #E0261D;
+}
+
+.customUPNW:hover{
+	background-color: #FFDE02;
+    border-color: #FFDE02;
+    color: #ffffff;
+    box-shadow: 0 0 10px #FFDE02;
 }
 
 .backbtn{
