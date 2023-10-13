@@ -101,6 +101,16 @@ a {
     color: #ffffff;
 }
 
+.customBNSF{
+	border-color: #3DAE2C;
+    color: #ffffff;
+}
+
+.customME{
+	border-color: #FE4E00;
+    color: #ffffff;
+}
+
 .custom4:hover{
     background-color: #324158;
     border-color: #41b6e6;
@@ -183,6 +193,20 @@ a {
     border-color: #FFDE02;
     color: #ffffff;
     box-shadow: 0 0 10px #FFDE02;
+}
+
+.customBNSF:hover{
+	background-color: #3DAE2C;
+    border-color: #3DAE2C;
+    color: #ffffff;
+    box-shadow: 0 0 10px #3DAE2C;
+}
+
+.customME:hover{
+	background-color: #FE4E00;
+    border-color: #FE4E00;
+    color: #ffffff;
+    box-shadow: 0 0 10px #FE4E00;
 }
 
 .backbtn{
