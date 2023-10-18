@@ -220,8 +220,8 @@ a {
 }
 
 #brand{
-    max-width: 60%;
-    min-width: 170px;
+    max-width: 100%;
+    min-width: 40%;
     height: auto;
 }
 

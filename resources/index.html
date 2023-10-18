@@ -20,8 +20,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> <!--Lato-->
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <!--Quicksand-->
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> <!--Chivo-->
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"> <!--Manrope-->
         
         <link rel="stylesheet" href="../css/custom.css" type="text/css">
         
@@ -39,7 +43,7 @@
         <nav class="navbar navbar-expand-md navbar-dark" style="background-color:#222222;">
             <div class="container-xxl">
                 <a href="../index.html" class="navbar-brand col-3">
-                        <img src="../assets/brand.png" width=60%>
+                        <img id="brand" src="../assets/brand.png">
                 </a>
                 <!--Toggle button for mobile nav-->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,37 +72,23 @@
         
     <!--Name Banner-->
         <div class="row" style="background-color:#434B58">
-            
-            <div class="col-5 mt-2 d-none d-lg-block">
-                <div class="pt-4 pb-lg-4 px-5" style="line-height:.8">
-                    <h2 class="text-light" style="font-family: Montserrat; font-size:50px">Resources</h2>
+            <div class="mt-2">
+                <div class="py-4 ps-5" style="line-height:.8">
+                    <h2 class="fw-bold text-start text-light" style="font-size:40px;font-family: Montserrat;"><img id="arrow" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;Resources</h2>
                 </div>
             </div>
-            
-            <div class="col-12 mt-2 d-lg-none d-block">
-                <div class="pt-4 pb-lg-4 px-5" style="line-height:.8">
-                    <h2 class="text-light" style="font-family: Montserrat; font-size:50px">Resources</h2>
-                </div>
-            </div>
-     
+		</div>
 	<!--Content-->
-            <div class="text-start mt-lg-2 col-lg-7 text-lg-end">
-                <div class="py-4 px-5" style="line-height:1.2">
-                    <p style="font-size:15px;font-family: Montserrat;color: #CDCDCD;">Here is a collection of designs and other things I've made for people to use. Each asset is free for personal use, with all rights reserved © Stormy Kara</p>
-                </div>
-            </div>            
-        </div>
-        
 		<section class="pt-3 pb-3" style="background-color:#33373e">
 			<div class="col-12 text-center">
-				<p style="font-size:15px;font-family: Montserrat;color: #CDCDCD;">All the assets are free to use, but if they helped you out, please consider leaving a thank-you tip on my Ko-fi or PayPal!<br/>Thank you! <i class="bi bi-heart-fill"></i></p>
+				<p style="font-size:15px;font-family: Chivo;color: #CDCDCD;">All the assets are free to use, but if they helped you out, please consider leaving a thank-you tip on my Ko-fi or PayPal!<br/>Thank you! <i class="bi bi-heart-fill"></i></p>
 				<a class="btn btn-outline-light btn-lg customPP fs-5 mx-2 rounded-5" style="font-family: Lato;" href="https://paypal.me/stormythepony?country.x=US&locale.x=en_US" target="_blank" role="button">PayPal&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-paypal"></i></a>
 				<a class="btn btn-outline-light btn-lg customKOFI fs-5 mx-2 rounded-5" style="font-family: Lato;" href="https://ko-fi.com/stormykara" target="_blank" role="button">Kofi&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-cup-hot"></i></a>
 			</div>
 		</section>
 		
 		<div class="pt-4 text-center px-5">
-            <p class="text-light" style="font-family: Montserrat;">These are unofficial maps/schedules not produced by or affiliated with CTA, Metra, Amtrak, RTA, or any agency.<br>
+            <p class="text-light" style="font-family: Chivo; font-weight:200">These are unofficial maps/schedules not produced by or affiliated with CTA, Metra, Amtrak, RTA, or any agency.<br>
 				
 			These resources are provided AS IS. No warranties are provided and all warranties are disclaimed.<br>
 				
@@ -106,7 +96,7 @@
         </div>
 			
 		<div class="pt-5 text-center px-5" style="line-height:.8">
-            <h2 class="text-light" style="font-family: Montserrat; font-size:30px">Metra System Map</h2>
+            <p class="text-light" style="font-family: Chivo; font-size:30px; font-weight: 600">Metra System Map</p>
 			<p class="text-light fst-italic" style="font-family: Montserrat;">Last verified 10/15/2023</p>
         </div>
 		
@@ -123,8 +113,8 @@
         </section>
         
         <div class="pt-5 text-center px-5" style="line-height:.8">
-            <h2 class="text-light" style="font-family: Montserrat; font-size:30px">Metra Schedules</h2>
-			<p class="text-light fst-italic" style="font-family: Montserrat;">Last verified 10/15/2023; Metra Electric Schedule WIP</p>
+            <p class="text-light" style="font-family: Chivo; font-size:30px; font-weight: 600">Metra Schedules</p>
+			<p class="text-light fst-italic" style="font-family: Chivo;">Last verified 10/15/2023; Metra Electric Schedule WIP</p>
         </div>
 		
 		
