@@ -1,11 +1,8 @@
-body
-    {font-family: 'Montserrat', sans-serif;}
-    {font-family: 'Lato', sans-serif;}
-
 a {
     color: unset;
 }
 
+/* Social Media Icon CSS */
 .socials{
     cursor: pointer;
     color: #ffffff;
@@ -22,197 +19,171 @@ a {
     color: #E42B2b;
     text-shadow: 0 0 25px #E42B2B;
 }
+/****************************************************/
 
+/* Buttons CSS */
 .btn-outline-primary{
     background-color: #222222;
     border-color: #fff;
-    color: #fff
-}
+    color: #fff}
 
 .btn-outline-primary:hover{
     background-color: #324158;
     border-color: #41b6e6;
     color: #ffffff;
-    box-shadow: 0 0 10px #41b6e6;
-}
+    box-shadow: 0 0 10px #41b6e6;}
 
 .custom{
     width: 220px;
-    height: auto;
-}
+    height: auto;}
 
 .custom2{
     min-width: 460px;
-    height: auto;
-}
+    height: auto;}
 
 .custom3{
     width: 220px;
-    height: auto;
-}
+    height: auto;}
 
 .custom4{
-    width: 220px;
+    width: auto;
     height: auto;
-}
-
-.customHC{
-    border-color: #8B1D42;
-    color: #ffffff;
-}
-
-.customNCS{
-	border-color: #63339F;
-    color: #ffffff;
-}
-
-.customMDW{
-	border-color: #F3B24A;
-    color: #ffffff;
-}
-
-.customUPN{
-	border-color: #0D5201;
-    color: #ffffff;
-}
-
-.customUPW{
-	border-color: #FFB2B9;
-    color: #ffffff;
-}
-
-.customSWS{
-	border-color: #005FB9;
-    color: #ffffff;
-}
-
-.customMDN{
-	border-color: #EA7200;
-    color: #ffffff;
-}
-
-.customRI{
-	border-color: #E0261D;
-    color: #ffffff;
-}
-
-.customUPNW{
-	border-color: #FFDE02;
-    color: #ffffff;
-}
-
-.customBNSF{
-	border-color: #3DAE2C;
-    color: #ffffff;
-}
-
-.customME{
-	border-color: #FE4E00;
-    color: #ffffff;
-}
-
+	margin-bottom: 10px;}
 .custom4:hover{
     background-color: #324158;
     border-color: #41b6e6;
     color: #ffffff;
-    box-shadow: 0 0 10px #41b6e6;   
-}
+    box-shadow: 0 0 10px #41b6e6;}
 
 .customPP:hover{
 	background-color: #2D4184;
     border-color: #ffffff;
     color: #ffffff;
-    box-shadow: 0 0 10px #2D4184;  
-}
+    box-shadow: 0 0 10px #2D4184;  }
 
 .customKOFI:hover{
 	background-color: #D95151;
     border-color: #ffffff;
     color: #ffffff;
-    box-shadow: 0 0 10px #D95151;  
-}
+    box-shadow: 0 0 10px #D95151;  }
 
+.backbtn{
+    width: 100px;}
+
+/****************************************************/
+
+/* Metra Schedule Buttons CSS */
+.customHC{
+    border-color: #8B1D42;
+    color: #ffffff;}
 .customHC:hover{
 	background-color: #8B1D42;
     border-color: #8B1D42;
     color: #ffffff;
-    box-shadow: 0 0 10px #8B1D42;
-}
+    box-shadow: 0 0 10px #8B1D42;}
 
+
+.customNCS{
+	border-color: #63339F;
+    color: #ffffff;}
 .customNCS:hover{
 	background-color: #63339F;
     border-color: #63339F;
     color: #ffffff;
-    box-shadow: 0 0 10px #63339F;
-}
+    box-shadow: 0 0 10px #63339F;}
 
+
+.customMDW{
+	border-color: #F3B24A;
+    color: #ffffff;}
 .customMDW:hover{
 	background-color: #F3B24A;
     border-color: #F3B24A;
     color: #ffffff;
-    box-shadow: 0 0 10px #F3B24A;
-}
+    box-shadow: 0 0 10px #F3B24A;}
 
+
+.customUPN{
+	border-color: #0D5201;
+    color: #ffffff;}
 .customUPN:hover{
 	background-color: #0D5201;
     border-color: #0D5201;
     color: #ffffff;
-    box-shadow: 0 0 10px #0D5201;
-}
+    box-shadow: 0 0 10px #0D5201;}
 
+
+.customUPW{
+	border-color: #FFB2B9;
+    color: #ffffff;}
 .customUPW:hover{
 	background-color: #FFB2B9;
     border-color: #FFB2B9;
     color: #ffffff;
-    box-shadow: 0 0 10px #FFB2B9;
-}
+    box-shadow: 0 0 10px #FFB2B9;}
 
+
+.customSWS{
+	border-color: #005FB9;
+    color: #ffffff;}
 .customSWS:hover{
 	background-color: #005FB9;
     border-color: #005FB9;
     color: #ffffff;
-    box-shadow: 0 0 10px #005FB9;
-}
+    box-shadow: 0 0 10px #005FB9;}
 
+
+.customMDN{
+	border-color: #EA7200;
+    color: #ffffff;}
 .customMDN:hover{
 	background-color: #EA7200;
     border-color: #EA7200;
     color: #ffffff;
-    box-shadow: 0 0 10px #EA7200;
-}
+    box-shadow: 0 0 10px #EA7200;}
 
+
+.customRI{
+	border-color: #E0261D;
+    color: #ffffff;}
 .customRI:hover{
 	background-color: #E0261D;
     border-color: #E0261D;
     color: #ffffff;
-    box-shadow: 0 0 10px #E0261D;
-}
+    box-shadow: 0 0 10px #E0261D;}
 
+
+.customUPNW{
+	border-color: #FFDE02;
+    color: #ffffff;}
 .customUPNW:hover{
 	background-color: #FFDE02;
     border-color: #FFDE02;
     color: #ffffff;
-    box-shadow: 0 0 10px #FFDE02;
-}
+    box-shadow: 0 0 10px #FFDE02;}
 
+
+.customBNSF{
+	border-color: #3DAE2C;
+    color: #ffffff;}
 .customBNSF:hover{
 	background-color: #3DAE2C;
     border-color: #3DAE2C;
     color: #ffffff;
-    box-shadow: 0 0 10px #3DAE2C;
-}
+    box-shadow: 0 0 10px #3DAE2C;}
 
+
+.customME{
+	border-color: #FE4E00;
+    color: #ffffff;}
 .customME:hover{
 	background-color: #FE4E00;
     border-color: #FE4E00;
     color: #ffffff;
-    box-shadow: 0 0 10px #FE4E00;
-}
+    box-shadow: 0 0 10px #FE4E00;}
+/****************************************************/
 
-.backbtn{
-    width: 100px;
-}
-
+/* Image CSS */
 #arrow{
     max-width: 50px;
     min-width: 50px;
@@ -382,3 +353,16 @@ a {
 #dnshowcaseP img:hover{
     transform: scale(1.05);
 }
+
+#btnLogo{
+    max-width: 30px;
+    min-width: 30px;
+    height: auto;
+}
+
+#agencyLogo{
+    max-width: 50px;
+    min-width: 50px;
+    height: auto;
+}
+/****************************************************/
