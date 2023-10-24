@@ -2,6 +2,15 @@ a {
     color: unset;
 }
 
+.stationList{
+	font-family: Chivo;
+	font-weight: 600;
+}
+
+.outln{
+	text-shadow: 1px 1px 2px black;
+}
+
 /* Social Media Icon CSS */
 .socials{
     cursor: pointer;
@@ -363,6 +372,12 @@ a {
 #agencyLogo{
     max-width: 50px;
     min-width: 50px;
+    height: auto;
+}
+
+#accessibleIcon{
+    max-width: 30px;
+    min-width: 30px;
     height: auto;
 }
 /****************************************************/

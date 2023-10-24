@@ -9,25 +9,38 @@
 		
 	</head>
 	
-		<p> Trains: <span id="trains"></span>
-        </p>
-	
-	<body>		
+	<body>
 		
+		<div id=trains></div>
+	
         <script>
+			const api_url = 'https://store.transitstat.us/cta_trains/transitStatus/stations/41320'
 			
-			const api_url = 'https://store.transitstat.us/cta_trains/transitStatus/stations/41200'
-			
-            async function getCTA() {
-                const response = await fetch(api_url);
-                const data = await response.json();
-				// return data;
+			function processTrain(train) {
+  					return Math.round((train.actualETA - Date.now())/60000)
 			}
 			
-            const data = getCTA();
-			const trains = data.destinations[Howard].trains;
-            // setInterval(getCTA, 1000);
-				
+            async function getCTA() {
+  				const response = await fetch(api_url);
+  				const data = await response.json();
+  				const trainsH = data.destinations['Howard'].trains;
+				const trains95 = data.destinations['95th/Dan Ryan'].trains;
+  				console.log(trainsH);
+				console.log(trains95);
+			
+				for (let i = 0; i < Object.keys(data.destinations).length; i++) {
+    				dest = Object.keys(data.destinations)[i];
+    				eta = data.destinations[dest].trains
+        				.map(processTrain)
+        				.sort((a, b) => a - b)
+        				.map((x) => x + " min")
+        				.join('\n')
+    				document.getElementById("trains").innerHTML +="<p>" + dest + "</p><p>" + eta + "</p>"
+					}
+			}
+			
+			getCTA();
+            setInterval(getCTA, 1000);
         </script>
 	
     </body>
