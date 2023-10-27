@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> <!--brings in icons-->
+        
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> <!--Montserrat-->
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> <!--Lato-->
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> <!--Chivo-->
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"> <!--Manrope-->
+        
+        <link rel="stylesheet" href="../../css/custom.css" type="text/css">
+        
+        <title>Stormy Kara - CTA L Tracker</title>
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+        <link rel="manifest" href="../favicon/site.webmanifest">
+    </head>
+     
+    <body style="background-color:#222222">
+    <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#222222;">
+            <div class="container-xxl">
+                <a href="index.html" class="navbar-brand col-3">
+                        <img id="brand" src="../../assets/brand.png">
+                </a>
+                <!--Toggle button for mobile nav-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                    
+                <!--Navbar links-->
+                <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav" style="font-family: Montserrat">
+                    <ul class="navbar-nav fw-bold">
+                        <li class="nav-item px-3 text-end">
+                            <a class="nav-link" href="../../resources/index.html">RESOURCES</a>
+                        </li>
+						<li class="nav-item px-3 text-end">
+                            <a class="nav-link active" href="../index.html">TRAIN TRACKERS</a>
+                        </li>
+                        <li class="nav-item px-3 text-end">
+                            <a class="nav-link" href="../../portfolio.html">PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item px-3 text-end">
+                            <a class="nav-link" href="../../about.html">ABOUT</a>
+                        </li>
+                        <li class="nav-item px-3 text-end">
+                            <a class="nav-link" href="../../index.html">HOME</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+    <!--Banner-->
+        <div class="row" style="background-color:#0551A4">
+            <div class="pt-3 pb-2 ps-5 col-6 d-none d-md-block">
+                <h2 class="outln fw-bold text-start text-light" style="font-size:40px"><img id="agencyLogo" class="align-top" src="../assets/metra.png" width=10%>&nbsp;&nbsp;Metra</h2>
+            </div>
+			<div class="pt-3 pb-2 ps-5 col-8 d-block d-md-none">
+                <h2 class="outln fw-bold text-start text-light" style="font-size:40px"><img id="agencyLogo" class="align-top" src="../assets/metra.png" width=10%>&nbsp;&nbsp;Metra</h2>
+            </div>
+			<div class="col-6 p-4 d-none d-md-block text-end"> 
+                <a class="btn btn-outline-light fw-bold rounded-1" style="font-family: Lato;" href="../index.html" role="button"><i class="bi bi-chevron-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;TRACKER HOME</a>
+            </div>
+			<div class="col-4 p-4 d-sm-block d-none d-md-none text-end"> 
+                <a class="btn btn-outline-light fw-bold rounded-1" style="font-family: Lato;" href="../index.html" role="button"><i class="bi bi-chevron-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;HOME</a>
+            </div>
+			<div class="col-4 p-4 d-block d-sm-none text-end"> 
+                <a class="btn btn-outline-light fw-bold rounded-1" style="font-family: Lato;" href="../index.html" role="button"><i class="bi bi-chevron-left"></i></a>
+            </div>
+        </div>
+		
+    <!--Content-->
+		
+	<p class="text-light text-center pt-3 px-4" style="font-family: Chivo;font-weight: 300;">Click or tap on a station from one of the dropdown lists to see real-time train tracking for that station.<br>Stations are organized by line, in order in which they appear on that line.</p>
+		
+	<div class="row">
+		<div class="px-5 py-3 col-4 d-none d-lg-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bnsf" aria-expanded="false" aria-controls="bnsf" style="background-color: #3DAE2C;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;BNSF</button>
+    				</h2>
+    				<div id="bnsf" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList" href="station.html?id=AURORA">Aurora</a><br>
+							<a class="stationList" href="station.html?id=ROUTE59">Route 59</a><br>
+							<a class="stationList" href="station.html?id=NAPERVILLE">Naperville</a><br>
+							<a class="stationList" href="station.html?id=LISLE">Lisle</a><br>
+							<a class="stationList" href="station.html?id=BELMONT">Belmont</a><br>
+							<a class="stationList" href="station.html?id=MAINST-DG">Downers Grove</a><br>
+							<a class="stationList" href="station.html?id=FAIRVIEWDG">Fairview Avenue</a><br>
+							<a class="stationList" href="station.html?id=WESTMONT">Westmont</a><br>
+							<a class="stationList" href="station.html?id=CLARNDNHIL">Clarendon Hills</a><br>
+							<a class="stationList" href="station.html?id=WHINSDALE">West Hinsdale</a><br>
+							<a class="stationList" href="station.html?id=HINSDALE">Hinsdale</a><br>
+							<a class="stationList" href="station.html?id=HIGHLANDS">Highlands</a><br>
+							<a class="stationList" href="station.html?id=WESTSPRING">Western Springs</a><br>
+							<a class="stationList" href="station.html?id=STONEAVE">Stone Avenue</a><br>
+							<a class="stationList" href="station.html?id=LAGRANGE">La Grange Road</a><br>
+							<a class="stationList" href="station.html?id=CONGRESSPK">Congress Park</a><br>
+							<a class="stationList" href="station.html?id=BROOKFIELD">Brookfield</a><br>
+							<a class="stationList" href="station.html?id=HOLLYWOOD">Hollywood</a><br>
+							<a class="stationList" href="station.html?id=RIVERSIDE">Riverside</a><br>
+							<a class="stationList" href="station.html?id=HARLEM">Harlem</a><br>
+							<a class="stationList" href="station.html?id=BERWYN">Berwyn</a><br>
+							<a class="stationList" href="station.html?id=LAVERGNE">LaVergne</a><br>
+							<a class="stationList" href="station.html?id=CICERO">Cicero</a><br>
+							<a class="stationList" href="station.html?id=BNWESTERN">Western</a><br>
+							<a class="stationList" href="station.html?id=HALSTED">Halsted</a><br>
+							<a class="stationList" href="station.html?id=CUS">Chicago Union Station</a>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+		<div class="px-5 py-3 col-4 d-none d-lg-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hc" aria-expanded="false" aria-controls="hc" style="background-color: #8B1E41;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;Heritage Corridor</button>
+    				</h2>
+    				<div id="hc" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList" href="station.html?id=JOLIET">Joliet</a><br>
+							<a class="stationList" href="station.html?id=LOCKPORT">Lockport</a><br>
+							<a class="stationList" href="station.html?id=ROMEOVILLE">Romeoville</a><br>
+							<a class="stationList" href="station.html?id=LEMONT">Lemont</a><br>
+							<a class="stationList" href="station.html?id=WILLOWSPRN">Willow Springs</a><br>
+							<a class="stationList" href="station.html?id=SUMMIT">Summit</a><br>
+							<a class="stationList" href="station.html?id=CUS">Chicago Union Station</a>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+		<div class="px-5 py-3 col-4 d-none d-lg-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mdn" aria-expanded="false" aria-controls="mdn" style="background-color: #E97200;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;MD-N</button>
+    				</h2>
+    				<div id="mdn" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList" href="station.html?id=FOXLAKE">Fox Lake</a><br>
+							<a class="stationList" href="station.html?id=INGLESIDE">Ingleside</a><br>
+							<a class="stationList" href="station.html?id=LONGLAKE">Long Lake</a><br>
+							<a class="stationList" href="station.html?id=ROUNDLAKE">Round Lake</a><br>
+							<a class="stationList" href="station.html?id=GRAYSLAKE">Grayslake</a><br>
+							<a class="stationList" href="station.html?id=PRAIRIEXNG">Prairie Crossing</a><br>
+							<a class="stationList" href="station.html?id=LIBERTYVIL">Libertyville</a><br>
+							<a class="stationList" href="station.html?id=LAKEFRST">Lake Forest</a><br>
+							<a class="stationList" href="station.html?id=DEERFIELD">Deerfield</a><br>
+							<a class="stationList" href="station.html?id=LAKECOOKRD">Lake Cook Road</a><br>
+							<a class="stationList" href="station.html?id=NBROOK">Northbrook</a><br>
+							<a class="stationList" href="station.html?id=NGLENVIEW">Glen/North Glenview</a><br>
+							<a class="stationList" href="station.html?id=GLENVIEW">Glenview</a><br>
+							<a class="stationList" href="station.html?id=GOLF">Golf</a><br>
+							<a class="stationList" href="station.html?id=MORTONGRV">Morton Grove</a><br>
+							<a class="stationList" href="station.html?id=EDGEBROOK">Edgebrook</a><br>
+							<a class="stationList" href="station.html?id=FORESTGLEN">Forest Glen</a><br>
+							<a class="stationList" href="station.html?id=MAYFAIR">Mayfair</a><br>
+							<a class="stationList" href="station.html?id=GRAYLAND">Grayland</a><br>
+							<a class="stationList" href="station.html?id=HEALY">Healy</a><br>
+							<a class="stationList" href="station.html?id=WESTERNAVE">Western</a><br>
+							<a class="stationList" href="station.html?id=CUS">Chicago Union Station</a>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+		<div class="px-5 py-3 col-4 d-none d-lg-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mdw" aria-expanded="false" aria-controls="mdw" style="background-color: #F2B24A;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;MD-W</button>
+    				</h2>
+    				<div id="mdw" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList" href="station.html?id=BIGTIMBER">Big Timber</a><br>
+							<a class="stationList" href="station.html?id=ELGIN">Elgin</a><br>
+							<a class="stationList" href="station.html?id=NATIONALS">National Street</a><br>
+							<a class="stationList" href="station.html?id=BARTLETT">Bartlett</a><br>
+							<a class="stationList" href="station.html?id=HANOVERP">Hanover Park</a><br>
+							<a class="stationList" href="station.html?id=SCHAUM">Schaumburg</a><br>
+							<a class="stationList" href="station.html?id=ROSELLE">Roselle</a><br>
+							<a class="stationList" href="station.html?id=MEDINAH">Medinah</a><br>
+							<a class="stationList" href="station.html?id=ITASCA">Itasca</a><br>
+							<a class="stationList" href="station.html?id=WOODDALE">Wood Dale</a><br>
+							<a class="stationList" href="station.html?id=BENSENVIL">Bensenville</a><br>
+							<a class="stationList" href="station.html?id=MANNHEIM">Mannheim</a><br>
+							<a class="stationList" href="station.html?id=FRANKLIN">Franklin Park</a><br>
+							<a class="stationList" href="station.html?id=RIVERGROVE">River Grove</a><br>
+							<a class="stationList" href="station.html?id=ELMWOODPK">Elmwood Park</a><br>
+							<a class="stationList" href="station.html?id=MONTCLARE">Mont Clare</a><br>
+							<a class="stationList" href="station.html?id=MARS">Mars</a><br>
+							<a class="stationList" href="station.html?id=GALEWOOD">Galewood</a><br>
+							<a class="stationList" href="station.html?id=HANSONPK">Hanson Park</a><br>
+							<a class="stationList" href="station.html?id=GRAND-CIC">Grand/Cicero</a><br>
+							<a class="stationList" href="station.html?id=WESTERNAVE">Western</a><br>
+							<a class="stationList" href="station.html?id=CUS">Chicago Union Station</a>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+		<div class="px-5 py-3 col-4 d-none d-lg-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#me" aria-expanded="false" aria-controls="me" style="background-color: #FF4F00;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;Metra Electric</button>
+    				</h2>
+    				<div id="me" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList fst-italic" style="text-decoration:none;font-size: 25px">University Park Branch</a><br>
+							<a class="stationList" href="station.html?id=UNIVERSITY">University Park</a><br>
+							<a class="stationList" href="station.html?id=RICHTON">Richton Park</a><br>
+							<a class="stationList" href="station.html?id=MATTESON">Matteson</a><br>
+							<a class="stationList" href="station.html?id=211TH-UP">211th St</a><br>
+							<a class="stationList" href="station.html?id=OLYMPIA">Olympia Fields</a><br>
+							<a class="stationList" href="station.html?id=FLOSSMOOR">Flossmoor</a><br>
+							<a class="stationList" href="station.html?id=HOMEWOOD">Homewood</a><br>
+							<a class="stationList" href="station.html?id=CALUMET">Calumet</a><br>
+							<a class="stationList" href="station.html?id=HAZELCREST">Hazel Crest</a><br>
+							<a class="stationList" href="station.html?id=HARVEY">Harvey</a><br>
+							<a class="stationListClosed">147th St</a><br>
+							<a class="stationList" href="station.html?id=IVANHOE">Ivanhoe</a><br>
+							<a class="stationList" href="station.html?id=RIVERDALE">Riverdale</a><br>
+							<a class="stationList fst-italic" style="text-decoration:none;font-size: 25px">Blue Island Branch</a><br>
+							<a class="stationList" href="station.html?id=BLUEISLAND">Blue Island</a><br>
+							<a class="stationList" href="station.html?id=BURROAK">Burr Oak</a><br>
+							<a class="stationList" href="station.html?id=ASHLAND">Ashland</a><br>
+							<a class="stationList" href="station.html?id=RACINE">Racine</a><br>
+							<a class="stationList" href="station.html?id=WPULLMAN">West Pullman</a><br>
+							<a class="stationList" href="station.html?id=STEWARTRID">Stewart Ridge</a><br>
+							<a class="stationList" href="station.html?id=STATEST">State St.</a><br>
+							<a class="stationList fst-italic" style="text-decoration:none;font-size: 25px">South Chicago Branch</a><br>
+							<a class="stationList" href="station.html?id=93RD-SC">South Chicago (93rd)</a><br>
+							<a class="stationList" href="station.html?id=87TH-SC">87th St.</a><br>
+							<a class="stationList" href="station.html?id=83RD-SC">83rd St.</a><br>
+							<a class="stationList" href="station.html?id=79TH-SC">Cheltenham (79th St.)</a><br>
+							<a class="stationList" href="station.html?id=WINDSORPK">Windsor Park</a><br>
+							<a class="stationList" href="station.html?id=SOUTHSHORE">South Shore</a><br>
+							<a class="stationList" href="station.html?id=STONYISLND">Stony Island</a><br>
+							<a class="stationList" href="station.html?id=BRYNMAWR">Bryn Mawr</a><br>
+							<a class="stationList fst-italic" style="text-decoration:none;font-size: 25px">Main Line</a><br>
+							<a class="stationList" href="station.html?id=KENSINGTN">Kensington</a><br>
+							<a class="stationList" href="station.html?id=111TH-UP">111th St. (Pullman)</a><br>
+							<a class="stationList" href="station.html?id=107TH-UP">107th St.</a><br>
+							<a class="stationList" href="station.html?id=103RD-UP">103rd St. (Rosemoor)</a><br>
+							<a class="stationList" href="station.html?id=95TH-UP">95th St.</a><br>
+							<a class="stationList" href="station.html?id=91ST-UP">91st St.</a><br>
+							<a class="stationList" href="station.html?id=87TH-UP">87th St. (Woodruff)</a><br>
+							<a class="stationList" href="station.html?id=83RD-UP">83rd St. (Avalon Park)</a><br>
+							<a class="stationListClosed">79th St. (Chatham)</a><br>
+							<a class="stationList" href="station.html?id=75TH-UP">75th St. (Grand Crossing)</a><br>
+							<a class="stationList" href="station.html?id=63RD-UP">63rd St.</a><br>
+							<a class="stationList" href="station.html?id=59TH-UP">59th St. (University of Chicago)</a><br>
+							<a class="stationList" href="station.html?id=55-56-57TH">55th-56th-57th St.</a><br>
+							<a class="stationList" href="station.html?id=51ST-53RD">51st/53rd St. (Hyde Park)</a><br>
+							<a class="stationList" href="station.html?id=47TH-UP">47th St. (Kenwood)</a><br>
+							<a class="stationList" href="station.html?id=27TH-UP">27th St.</a><br>
+							<a class="stationList" href="station.html?id=MCCORMICK">McCormick Place</a><br>
+							<a class="stationList" href="station.html?id=18TH-UP">18th St.</a><br>
+							<a class="stationList" href="station.html?id=MUSEUM">Museum Campus/11th St.</a><br>
+							<a class="stationList" href="station.html?id=VANBUREN">Van Buren St.</a><br>
+							<a class="stationList" href="station.html?id=MILLENNIUM">Millennium Station</a><br>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+		<div class="px-5 py-3 col-4 d-none d-lg-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ncs" aria-expanded="false" aria-controls="ncs" style="background-color: #6233A0;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;North Central</button>
+    				</h2>
+    				<div id="ncs" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList" href="station.html?id=ANTIOCH">Antioch</a><br>
+							<a class="stationList" href="station.html?id=LAKEVILLA">Lake Villa</a><br>
+							<a class="stationList" href="station.html?id=ROUNDLKBCH">Round Lake Beach</a><br>
+							<a class="stationList" href="station.html?id=NCSGRAYSLK">Washington St. (Grayslake)</a><br>
+							<a class="stationList" href="station.html?id=PRAIRCROSS">Prairie Crossing</a><br>
+							<a class="stationList" href="station.html?id=MUNDELEIN">Mundelein</a><br>
+							<a class="stationList" href="station.html?id=VERNON">Vernon Hills</a><br>
+							<a class="stationList" href="station.html?id=PRAIRIEVW">Prairie View</a><br>
+							<a class="stationList" href="station.html?id=BUFFGROVE">Buffalo Grove</a><br>
+							<a class="stationList" href="station.html?id=WHEELING">Wheeling</a><br>
+							<a class="stationList" href="station.html?id=PROSPECTHG">Prospect Heights</a><br>
+							<a class="stationList" href="station.html?id=OHARE">O'Hare Transfer&nbsp;&nbsp;<i class="bi bi-airplane-fill"></i></a><br>
+							<a class="stationList" href="station.html?id=ROSEMONT">Rosemont</a><br>
+							<a class="stationList" href="station.html?id=SCHILLERPK">Schiller Park</a><br>
+							<a class="stationList" href="station.html?id=FRANKLINPK">Franklin Park</a><br>
+							<a class="stationList" href="station.html?id=RIVERGROVE">River Grove</a><br>
+							<a class="stationList" href="station.html?id=WESTERNAVE">Western Ave</a><br>
+							<a class="stationList" href="station.html?id=CUS">Chicago Union Station</a><br>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+		<div class="px-5 py-3 col-4 d-none d-lg-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ri" aria-expanded="false" aria-controls="ri" style="background-color: #E0261E;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;Rock Island</button>
+    				</h2>
+    				<div id="ri" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList" href="station.html?id=JOLIET">Joliet</a><br>
+							<a class="stationList" href="station.html?id=NEWLENOX">New Lenox</a><br>
+							<a class="stationList" href="station.html?id=MOKENA">Mokena</a><br>
+							<a class="stationList" href="station.html?id=HICKORYCRK">Hickory Creek</a><br>
+							<a class="stationList" href="station.html?id=TINLEY80TH">Tinley 80th Ave.</a><br>
+							<a class="stationList" href="station.html?id=TINLEYPARK">Tinley Park</a><br>
+							<a class="stationList" href="station.html?id=OAKFOREST">Oak Forest</a><br>
+							<a class="stationList" href="station.html?id=MIDLOTHIAN">Midlothian</a><br>
+							<a class="stationList" href="station.html?id=ROBBINS">Robbins</a><br>
+							<a class="stationList" href="station.html?id=VERMONT">Blue Island</a><br>
+							<a class="stationList" href="station.html?id=WASHHGTS">103rd St. - Washington Heights</a><br>
+							<a class="stationList" href="station.html?id=LONGWOOD">95th St. - Longwood Manor</a><br>
+							<hr style="margin-top:10px;margin-bottom:10px;height:3px;border-width:0;color:gray;background-color:gray"/>
+							<a class="stationList fst-italic" style="text-decoration:none;font-size: 25px">Beverly Branch</a><br>
+							<a class="stationList" href="station.html?id=PRAIRIEST">Prairie St.</a><br>
+							<a class="stationList" href="station.html?id=123RD-BEV">123rd St.</a><br>
+							<a class="stationList" href="station.html?id=119TH-BEV">119th St.</a><br>
+							<a class="stationList" href="station.html?id=115TH-BEV">115th St. - Morgan Park</a><br>
+							<a class="stationList" href="station.html?id=111TH-BEV">111th St. - Morgan Park</a><br>
+							<a class="stationList" href="station.html?id=107TH-BEV">107th St. - Beverly Hills</a><br>
+							<a class="stationList" href="station.html?id=103RD-BEV">103rd St. - Beverly Hills</a><br>
+							<a class="stationList" href="station.html?id=99TH-BEV">99th St. - Beverly Hills</a><br>
+							<a class="stationList" href="station.html?id=95TH-BEV">95th St. - Beverly Hills</a><br>
+							<a class="stationList" href="station.html?id=91ST-BEV">91st St. - Beverly Hills</a><br>
+							<a class="stationList" href="station.html?id=BRAINERD">Brainerd</a><br>
+							<hr style="margin-top:10px;margin-bottom:10px;height:3px;border-width:0;color:gray;background-color:gray"/>
+							<a class="stationList" href="station.html?id=GRESHAM">Gresham</a><br>
+							<a class="stationList" href="station.html?id=35TH">35th St./Lou Jones</a><br>
+							<a class="stationList" href="station.html?id=LSS">LaSalle St.</a><br>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+		<div class="px-5 py-3 col-4 d-none d-lg-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sws" aria-expanded="false" aria-controls="sws" style="background-color: #005FB9;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;Southwest Service</button>
+    				</h2>
+    				<div id="sws" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList" href="station.html?id=MANHATTAN">Manhattan</a><br>
+							<a class="stationList" href="station.html?id=LARAWAY">Laraway Rd</a><br>
+							<a class="stationList" href="station.html?id=179TH-SWS">179th St. - Orland Park</a><br>
+							<a class="stationList" href="station.html?id=153RD-SWS">153rd St. - Orland Park</a><br>
+							<a class="stationList" href="station.html?id=143RD-SWS">143rd St. - Orland Park</a><br>
+							<a class="stationList" href="station.html?id=PALOSPARK">Palos Park</a><br>
+							<a class="stationList" href="station.html?id=PALOSHTS">Palos Heights</a><br>
+							<a class="stationList" href="station.html?id=WORTH">Worth</a><br>
+							<a class="stationList" href="station.html?id=CHICRIDGE">Chicago Ridge</a><br>
+							<a class="stationList" href="station.html?id=OAKLAWN">Oak Lawn</a><br>
+							<a class="stationList" href="station.html?id=ASHBURN">Ashburn</a><br>
+							<a class="stationList" href="station.html?id=WRIGHTWOOD">Wrightwood</a><br>
+							<a class="stationList" href="station.html?id=CUS">Chicago Union Station</a><br>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+		<div class="px-5 py-3 col-4 d-none d-lg-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#upn" aria-expanded="false" aria-controls="upn" style="background-color: #0D5201;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;UP-N</button>
+    				</h2>
+    				<div id="upn" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList" href="station.html?id=KENOSHA">Kenosha</a><br>
+							<a class="stationList" href="station.html?id=WINTHROP">Winthrop Harbor</a><br>
+							<a class="stationList" href="station.html?id=ZION">Zion</a><br>
+							<a class="stationList" href="station.html?id=WAUKEGAN">Waukegan</a><br>
+							<a class="stationList" href="station.html?id=NCHICAGO">North Chicago</a><br>
+							<a class="stationList" href="station.html?id=GRTLAKES">Great Lakes</a><br>
+							<a class="stationList" href="station.html?id=LAKEBLUFF">Lake Bluff</a><br>
+							<a class="stationList" href="station.html?id=LKFOREST">Lake FOrest</a><br>
+							<a class="stationList" href="station.html?id=FTSHERIDAN">Fort Sheridan</a><br>
+							<a class="stationList" href="station.html?id=HIGHWOOD">Highwood</a><br>
+							<a class="stationList" href="station.html?id=HIGHLANDPK">Highland Park</a><br>
+							<a class="stationList" href="station.html?id=RAVINIA">Ravinia</a><br>
+							<a class="stationList" href="station.html?id=RAVINIAPK">Ravinia Park</a><br>
+							<a class="stationList" href="station.html?id=BRAESIDE">Braeside</a><br>
+							<a class="stationList" href="station.html?id=GLENCOE">Glencoe</a><br>
+							<a class="stationList" href="station.html?id=HUBARDWOOD">Hubbard Woods</a><br>
+							<a class="stationList" href="station.html?id=WINNETKA">Winnetka</a><br>
+							<a class="stationList" href="station.html?id=INDIANHILL">Indian Hill</a><br>
+							<a class="stationList" href="station.html?id=KENILWORTH">Kenilworth</a><br>
+							<a class="stationList" href="station.html?id=WILMETTE">Wilmette</a><br>
+							<a class="stationList" href="station.html?id=CENTRALST">Central St. - Evanston</a><br>
+							<a class="stationList" href="station.html?id=EVANSTON">Davis St. - Evanston</a><br>
+							<a class="stationList" href="station.html?id=MAINST">Main St. - Evanston</a><br>
+							<a class="stationList" href="station.html?id=ROGERPK">Rogers Park</a><br>
+							<a class="stationList" href="station.html?id=RAVENSWOOD">Ravenswood</a><br>
+							<a class="stationList" href="station.html?id=CLYBOURN">Clybourn</a><br>
+							<a class="stationList" href="station.html?id=OTC">Ogilvie Transportation Center</a>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+		<div class="px-5 py-3 col-4 d-none d-lg-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#upnw" aria-expanded="false" aria-controls="upnw" style="background-color: #FFDE02;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;UP-NW</button>
+    				</h2>
+    				<div id="upnw" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList" href="station.html?id=MCHENRY">McHenry</a><br>
+							<hr style="margin-top:10px;margin-bottom:10px;height:3px;border-width:0;color:gray;background-color:gray"/>
+							<a class="stationList" href="station.html?id=HARVARD">Harvard</a><br>
+							<a class="stationList" href="station.html?id=WOODSTOCK">Woodstock</a><br>
+							<a class="stationList" href="station.html?id=CRYSTAL">Crystal Lake</a><br>
+							<hr style="margin-top:10px;margin-bottom:10px;height:3px;border-width:0;color:gray;background-color:gray"/>
+							<a class="stationList" href="station.html?id=PINGREE">Pingree Raod</a><br>
+							<a class="stationList" href="station.html?id=CARY">Cary</a><br>
+							<a class="stationList" href="station.html?id=FOXRG">Fox River Grove</a><br>
+							<a class="stationList" href="station.html?id=BARRINGTON">Barrington</a><br>
+							<a class="stationList" href="station.html?id=PALATINE">Palatine</a><br>
+							<a class="stationList" href="station.html?id=ARLINGTNPK">Arlington Park</a><br>
+							<a class="stationList" href="station.html?id=ARLINGTNHT">Arlington Heights</a><br>
+							<a class="stationList" href="station.html?id=MTPROSPECT">Mt. Prospect</a><br>
+							<a class="stationList" href="station.html?id=CUMBERLAND">Cumberland</a><br>
+							<a class="stationList" href="station.html?id=DESPLAINES">Des Plaines</a><br>
+							<a class="stationList" href="station.html?id=DEEROAD">Dee Road</a><br>
+							<a class="stationList" href="station.html?id=PARKRIDGE">Park Ridge</a><br>
+							<a class="stationList" href="station.html?id=EDISONPK">Edison Park</a><br>
+							<a class="stationList" href="station.html?id=NORWOODP">Norwood Park</a><br>
+							<a class="stationList" href="station.html?id=GLADSTONEP">Gladstone Park</a><br>
+							<a class="stationList" href="station.html?id=JEFFERSONP">Jefferson Park</a><br>
+							<a class="stationList" href="station.html?id=IRVINGPK">Irving Park</a><br>
+							<a class="stationList" href="station.html?id=CLYBOURN">Clybourn</a><br>
+							<a class="stationList" href="station.html?id=OTC">Ogilvie Transportation Center</a>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+		<div class="px-5 py-3 col-4 d-none d-lg-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#upw" aria-expanded="false" aria-controls="upw" style="background-color: #FFB3BA;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;UP-W</button>
+    				</h2>
+    				<div id="upw" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList" href="station.html?id=ELBURN">Elburn</a><br>
+							<a class="stationList" href="station.html?id=LAFOX">La Fox</a><br>
+							<a class="stationList" href="station.html?id=GENEVA">Geneva</a><br>
+							<a class="stationList" href="station.html?id=WCHICAGO">West Chicago</a><br>
+							<a class="stationList" href="station.html?id=WINFIELD">Winfield</a><br>
+							<a class="stationList" href="station.html?id=WHEATON">Wheaton</a><br>
+							<a class="stationList" href="station.html?id=COLLEGEAVE">College Ave.</a><br>
+							<a class="stationList" href="station.html?id=GLENELLYN">Glen Ellyn</a><br>
+							<a class="stationList" href="station.html?id=LOMBARD">Lombard</a><br>
+							<a class="stationList" href="station.html?id=VILLAPARK">Villa Park</a><br>
+							<a class="stationList" href="station.html?id=ELMHURST">Elmhurst</a><br>
+							<a class="stationList" href="station.html?id=BERKELEY">Berkeley</a><br>
+							<a class="stationList" href="station.html?id=BELLWOOD">Bellwood</a><br>
+							<a class="stationList" href="station.html?id=MELROSEPK">Melrose Park</a><br>
+							<a class="stationList" href="station.html?id=MAYWOOD">Maywood</a><br>
+							<a class="stationList" href="station.html?id=RIVRFOREST">River Forest</a><br>
+							<a class="stationList" href="station.html?id=OAKPARK">Oak Park</a><br>
+							<a class="stationList" href="station.html?id=KEDZIE">Kedzie</a>
+							<a class="stationList" href="station.html?id=OTC">Ogilvie Transportation Center</a>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+	</div>
+		
+	<div class="row">
+		<div class="px-5 py-2 col-12 d-lg-none d-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bnsf" aria-expanded="false" aria-controls="bnsf" style="background-color: #3DAE2C;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;BNSF</button>
+    				</h2>
+    				<div id="bnsf" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList" href="station.html?id=AURORA">Aurora</a><br>
+							<a class="stationList" href="station.html?id=ROUTE59">Route 59</a><br>
+							<a class="stationList" href="station.html?id=NAPERVILLE">Naperville</a><br>
+							<a class="stationList" href="station.html?id=LISLE">Lisle</a><br>
+							<a class="stationList" href="station.html?id=BELMONT">Belmont</a><br>
+							<a class="stationList" href="station.html?id=MAINST-DG">Downers Grove</a><br>
+							<a class="stationList" href="station.html?id=FAIRVIEWDG">Fairview Avenue</a><br>
+							<a class="stationList" href="station.html?id=WESTMONT">Westmont</a><br>
+							<a class="stationList" href="station.html?id=CLARNDNHIL">Clarendon Hills</a><br>
+							<a class="stationList" href="station.html?id=WHINSDALE">West Hinsdale</a><br>
+							<a class="stationList" href="station.html?id=HINSDALE">Hinsdale</a><br>
+							<a class="stationList" href="station.html?id=HIGHLANDS">Highlands</a><br>
+							<a class="stationList" href="station.html?id=WESTSPRING">Western Springs</a><br>
+							<a class="stationList" href="station.html?id=STONEAVE">Stone Avenue</a><br>
+							<a class="stationList" href="station.html?id=LAGRANGE">La Grange Road</a><br>
+							<a class="stationList" href="station.html?id=CONGRESSPK">Congress Park</a><br>
+							<a class="stationList" href="station.html?id=BROOKFIELD">Brookfield</a><br>
+							<a class="stationList" href="station.html?id=HOLLYWOOD">Hollywood</a><br>
+							<a class="stationList" href="station.html?id=RIVERSIDE">Riverside</a><br>
+							<a class="stationList" href="station.html?id=HARLEM">Harlem</a><br>
+							<a class="stationList" href="station.html?id=BERWYN">Berwyn</a><br>
+							<a class="stationList" href="station.html?id=LAVERGNE">LaVergne</a><br>
+							<a class="stationList" href="station.html?id=CICERO">Cicero</a><br>
+							<a class="stationList" href="station.html?id=BNWESTERN">Western</a><br>
+							<a class="stationList" href="station.html?id=HALSTED">Halsted</a><br>
+							<a class="stationList" href="station.html?id=CUS">Chicago Union Station</a>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+		<div class="px-5 py-2 col-12 d-lg-none d-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hc" aria-expanded="false" aria-controls="hc" style="background-color: #8B1E41;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;Heritage Corridor</button>
+    				</h2>
+    				<div id="hc" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList" href="station.html?id=JOLIET">Joliet</a><br>
+							<a class="stationList" href="station.html?id=LOCKPORT">Lockport</a><br>
+							<a class="stationList" href="station.html?id=ROMEOVILLE">Romeoville</a><br>
+							<a class="stationList" href="station.html?id=LEMONT">Lemont</a><br>
+							<a class="stationList" href="station.html?id=WILLOWSPRN">Willow Springs</a><br>
+							<a class="stationList" href="station.html?id=SUMMIT">Summit</a><br>
+							<a class="stationList" href="station.html?id=CUS">Chicago Union Station</a>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+		<div class="px-5 py-2 col-12 d-lg-none d-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mdn" aria-expanded="false" aria-controls="mdn" style="background-color: #E97200;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;MD-N</button>
+    				</h2>
+    				<div id="mdn" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList" href="station.html?id=FOXLAKE">Fox Lake</a><br>
+							<a class="stationList" href="station.html?id=INGLESIDE">Ingleside</a><br>
+							<a class="stationList" href="station.html?id=LONGLAKE">Long Lake</a><br>
+							<a class="stationList" href="station.html?id=ROUNDLAKE">Round Lake</a><br>
+							<a class="stationList" href="station.html?id=GRAYSLAKE">Grayslake</a><br>
+							<a class="stationList" href="station.html?id=PRAIRIEXNG">Prairie Crossing</a><br>
+							<a class="stationList" href="station.html?id=LIBERTYVIL">Libertyville</a><br>
+							<a class="stationList" href="station.html?id=LAKEFRST">Lake Forest</a><br>
+							<a class="stationList" href="station.html?id=DEERFIELD">Deerfield</a><br>
+							<a class="stationList" href="station.html?id=LAKECOOKRD">Lake Cook Road</a><br>
+							<a class="stationList" href="station.html?id=NBROOK">Northbrook</a><br>
+							<a class="stationList" href="station.html?id=NGLENVIEW">Glen/North Glenview</a><br>
+							<a class="stationList" href="station.html?id=GLENVIEW">Glenview</a><br>
+							<a class="stationList" href="station.html?id=GOLF">Golf</a><br>
+							<a class="stationList" href="station.html?id=MORTONGRV">Morton Grove</a><br>
+							<a class="stationList" href="station.html?id=EDGEBROOK">Edgebrook</a><br>
+							<a class="stationList" href="station.html?id=FORESTGLEN">Forest Glen</a><br>
+							<a class="stationList" href="station.html?id=MAYFAIR">Mayfair</a><br>
+							<a class="stationList" href="station.html?id=GRAYLAND">Grayland</a><br>
+							<a class="stationList" href="station.html?id=HEALY">Healy</a><br>
+							<a class="stationList" href="station.html?id=WESTERNAVE">Western</a><br>
+							<a class="stationList" href="station.html?id=CUS">Chicago Union Station</a>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+		<div class="px-5 py-2 col-12 d-lg-none d-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mdw" aria-expanded="false" aria-controls="mdw" style="background-color: #F2B24A;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;MD-W</button>
+    				</h2>
+    				<div id="mdw" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList" href="station.html?id=BIGTIMBER">Big Timber</a><br>
+							<a class="stationList" href="station.html?id=ELGIN">Elgin</a><br>
+							<a class="stationList" href="station.html?id=NATIONALS">National Street</a><br>
+							<a class="stationList" href="station.html?id=BARTLETT">Bartlett</a><br>
+							<a class="stationList" href="station.html?id=HANOVERP">Hanover Park</a><br>
+							<a class="stationList" href="station.html?id=SCHAUM">Schaumburg</a><br>
+							<a class="stationList" href="station.html?id=ROSELLE">Roselle</a><br>
+							<a class="stationList" href="station.html?id=MEDINAH">Medinah</a><br>
+							<a class="stationList" href="station.html?id=ITASCA">Itasca</a><br>
+							<a class="stationList" href="station.html?id=WOODDALE">Wood Dale</a><br>
+							<a class="stationList" href="station.html?id=BENSENVIL">Bensenville</a><br>
+							<a class="stationList" href="station.html?id=MANNHEIM">Mannheim</a><br>
+							<a class="stationList" href="station.html?id=FRANKLIN">Franklin Park</a><br>
+							<a class="stationList" href="station.html?id=RIVERGROVE">River Grove</a><br>
+							<a class="stationList" href="station.html?id=ELMWOODPK">Elmwood Park</a><br>
+							<a class="stationList" href="station.html?id=MONTCLARE">Mont Clare</a><br>
+							<a class="stationList" href="station.html?id=MARS">Mars</a><br>
+							<a class="stationList" href="station.html?id=GALEWOOD">Galewood</a><br>
+							<a class="stationList" href="station.html?id=HANSONPK">Hanson Park</a><br>
+							<a class="stationList" href="station.html?id=GRAND-CIC">Grand/Cicero</a><br>
+							<a class="stationList" href="station.html?id=WESTERNAVE">Western</a><br>
+							<a class="stationList" href="station.html?id=CUS">Chicago Union Station</a>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+		<div class="px-5 py-2 col-12 d-lg-none d-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#me" aria-expanded="false" aria-controls="me" style="background-color: #FF4F00;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;Metra Electric</button>
+    				</h2>
+    				<div id="me" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList fst-italic" style="text-decoration:none;font-size: 25px">University Park Branch</a><br>
+							<a class="stationList" href="station.html?id=UNIVERSITY">University Park</a><br>
+							<a class="stationList" href="station.html?id=RICHTON">Richton Park</a><br>
+							<a class="stationList" href="station.html?id=MATTESON">Matteson</a><br>
+							<a class="stationList" href="station.html?id=211TH-UP">211th St</a><br>
+							<a class="stationList" href="station.html?id=OLYMPIA">Olympia Fields</a><br>
+							<a class="stationList" href="station.html?id=FLOSSMOOR">Flossmoor</a><br>
+							<a class="stationList" href="station.html?id=HOMEWOOD">Homewood</a><br>
+							<a class="stationList" href="station.html?id=CALUMET">Calumet</a><br>
+							<a class="stationList" href="station.html?id=HAZELCREST">Hazel Crest</a><br>
+							<a class="stationList" href="station.html?id=HARVEY">Harvey</a><br>
+							<a class="stationListClosed">147th St</a><br>
+							<a class="stationList" href="station.html?id=IVANHOE">Ivanhoe</a><br>
+							<a class="stationList" href="station.html?id=RIVERDALE">Riverdale</a><br>
+							<a class="stationList fst-italic" style="text-decoration:none;font-size: 25px">Blue Island Branch</a><br>
+							<a class="stationList" href="station.html?id=BLUEISLAND">Blue Island</a><br>
+							<a class="stationList" href="station.html?id=BURROAK">Burr Oak</a><br>
+							<a class="stationList" href="station.html?id=ASHLAND">Ashland</a><br>
+							<a class="stationList" href="station.html?id=RACINE">Racine</a><br>
+							<a class="stationList" href="station.html?id=WPULLMAN">West Pullman</a><br>
+							<a class="stationList" href="station.html?id=STEWARTRID">Stewart Ridge</a><br>
+							<a class="stationList" href="station.html?id=STATEST">State St.</a><br>
+							<a class="stationList fst-italic" style="text-decoration:none;font-size: 25px">South Chicago Branch</a><br>
+							<a class="stationList" href="station.html?id=93RD-SC">South Chicago (93rd)</a><br>
+							<a class="stationList" href="station.html?id=87TH-SC">87th St.</a><br>
+							<a class="stationList" href="station.html?id=83RD-SC">83rd St.</a><br>
+							<a class="stationList" href="station.html?id=79TH-SC">Cheltenham (79th St.)</a><br>
+							<a class="stationList" href="station.html?id=WINDSORPK">Windsor Park</a><br>
+							<a class="stationList" href="station.html?id=SOUTHSHORE">South Shore</a><br>
+							<a class="stationList" href="station.html?id=STONYISLND">Stony Island</a><br>
+							<a class="stationList" href="station.html?id=BRYNMAWR">Bryn Mawr</a><br>
+							<a class="stationList fst-italic" style="text-decoration:none;font-size: 25px">Main Line</a><br>
+							<a class="stationList" href="station.html?id=KENSINGTN">Kensington</a><br>
+							<a class="stationList" href="station.html?id=111TH-UP">111th St. (Pullman)</a><br>
+							<a class="stationList" href="station.html?id=107TH-UP">107th St.</a><br>
+							<a class="stationList" href="station.html?id=103RD-UP">103rd St. (Rosemoor)</a><br>
+							<a class="stationList" href="station.html?id=95TH-UP">95th St.</a><br>
+							<a class="stationList" href="station.html?id=91ST-UP">91st St.</a><br>
+							<a class="stationList" href="station.html?id=87TH-UP">87th St. (Woodruff)</a><br>
+							<a class="stationList" href="station.html?id=83RD-UP">83rd St. (Avalon Park)</a><br>
+							<a class="stationListClosed">79th St. (Chatham)</a><br>
+							<a class="stationList" href="station.html?id=75TH-UP">75th St. (Grand Crossing)</a><br>
+							<a class="stationList" href="station.html?id=63RD-UP">63rd St.</a><br>
+							<a class="stationList" href="station.html?id=59TH-UP">59th St. (University of Chicago)</a><br>
+							<a class="stationList" href="station.html?id=55-56-57TH">55th-56th-57th St.</a><br>
+							<a class="stationList" href="station.html?id=51ST-53RD">51st/53rd St. (Hyde Park)</a><br>
+							<a class="stationList" href="station.html?id=47TH-UP">47th St. (Kenwood)</a><br>
+							<a class="stationList" href="station.html?id=27TH-UP">27th St.</a><br>
+							<a class="stationList" href="station.html?id=MCCORMICK">McCormick Place</a><br>
+							<a class="stationList" href="station.html?id=18TH-UP">18th St.</a><br>
+							<a class="stationList" href="station.html?id=MUSEUM">Museum Campus/11th St.</a><br>
+							<a class="stationList" href="station.html?id=VANBUREN">Van Buren St.</a><br>
+							<a class="stationList" href="station.html?id=MILLENNIUM">Millennium Station</a><br>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+		<div class="px-5 py-2 col-12 d-lg-none d-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ncs" aria-expanded="false" aria-controls="ncs" style="background-color: #6233A0;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;North Central Service</button>
+    				</h2>
+    				<div id="ncs" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList" href="station.html?id=ANTIOCH">Antioch</a><br>
+							<a class="stationList" href="station.html?id=LAKEVILLA">Lake Villa</a><br>
+							<a class="stationList" href="station.html?id=ROUNDLKBCH">Round Lake Beach</a><br>
+							<a class="stationList" href="station.html?id=NCSGRAYSLK">Washington St. (Grayslake)</a><br>
+							<a class="stationList" href="station.html?id=PRAIRCROSS">Prairie Crossing</a><br>
+							<a class="stationList" href="station.html?id=MUNDELEIN">Mundelein</a><br>
+							<a class="stationList" href="station.html?id=VERNON">Vernon Hills</a><br>
+							<a class="stationList" href="station.html?id=PRAIRIEVW">Prairie View</a><br>
+							<a class="stationList" href="station.html?id=BUFFGROVE">Buffalo Grove</a><br>
+							<a class="stationList" href="station.html?id=WHEELING">Wheeling</a><br>
+							<a class="stationList" href="station.html?id=PROSPECTHG">Prospect Heights</a><br>
+							<a class="stationList" href="station.html?id=OHARE">O'Hare Transfer&nbsp;&nbsp;<i class="bi bi-airplane-fill"></i></a><br>
+							<a class="stationList" href="station.html?id=ROSEMONT">Rosemont</a><br>
+							<a class="stationList" href="station.html?id=SCHILLERPK">Schiller Park</a><br>
+							<a class="stationList" href="station.html?id=FRANKLINPK">Franklin Park</a><br>
+							<a class="stationList" href="station.html?id=RIVERGROVE">River Grove</a><br>
+							<a class="stationList" href="station.html?id=WESTERNAVE">Western Ave</a><br>
+							<a class="stationList" href="station.html?id=CUS">Chicago Union Station</a><br>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+		<div class="px-5 py-2 col-12 d-lg-none d-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ri" aria-expanded="false" aria-controls="ri" style="background-color: #E0261E;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;Rock Island</button>
+    				</h2>
+    				<div id="ri" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList" href="station.html?id=JOLIET">Joliet</a><br>
+							<a class="stationList" href="station.html?id=NEWLENOX">New Lenox</a><br>
+							<a class="stationList" href="station.html?id=MOKENA">Mokena</a><br>
+							<a class="stationList" href="station.html?id=HICKORYCRK">Hickory Creek</a><br>
+							<a class="stationList" href="station.html?id=TINLEY80TH">Tinley 80th Ave.</a><br>
+							<a class="stationList" href="station.html?id=TINLEYPARK">Tinley Park</a><br>
+							<a class="stationList" href="station.html?id=OAKFOREST">Oak Forest</a><br>
+							<a class="stationList" href="station.html?id=MIDLOTHIAN">Midlothian</a><br>
+							<a class="stationList" href="station.html?id=ROBBINS">Robbins</a><br>
+							<a class="stationList" href="station.html?id=VERMONT">Blue Island</a><br>
+							<a class="stationList" href="station.html?id=WASHHGTS">103rd St. - Washington Heights</a><br>
+							<a class="stationList" href="station.html?id=LONGWOOD">95th St. - Longwood Manor</a><br>
+							<hr style="margin-top:10px;margin-bottom:10px;height:3px;border-width:0;color:gray;background-color:gray"/>
+							<a class="stationList fst-italic" style="text-decoration:none;font-size: 25px">Beverly Branch</a><br>
+							<a class="stationList" href="station.html?id=PRAIRIEST">Prairie St.</a><br>
+							<a class="stationList" href="station.html?id=123RD-BEV">123rd St.</a><br>
+							<a class="stationList" href="station.html?id=119TH-BEV">119th St.</a><br>
+							<a class="stationList" href="station.html?id=115TH-BEV">115th St. - Morgan Park</a><br>
+							<a class="stationList" href="station.html?id=111TH-BEV">111th St. - Morgan Park</a><br>
+							<a class="stationList" href="station.html?id=107TH-BEV">107th St. - Beverly Hills</a><br>
+							<a class="stationList" href="station.html?id=103RD-BEV">103rd St. - Beverly Hills</a><br>
+							<a class="stationList" href="station.html?id=99TH-BEV">99th St. - Beverly Hills</a><br>
+							<a class="stationList" href="station.html?id=95TH-BEV">95th St. - Beverly Hills</a><br>
+							<a class="stationList" href="station.html?id=91ST-BEV">91st St. - Beverly Hills</a><br>
+							<a class="stationList" href="station.html?id=BRAINERD">Brainerd</a><br>
+							<hr style="margin-top:10px;margin-bottom:10px;height:3px;border-width:0;color:gray;background-color:gray"/>
+							<a class="stationList" href="station.html?id=GRESHAM">Gresham</a><br>
+							<a class="stationList" href="station.html?id=35TH">35th St./Lou Jones</a><br>
+							<a class="stationList" href="station.html?id=LSS">LaSalle St.</a><br>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+		<div class="px-5 py-2 col-12 d-lg-none d-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sws" aria-expanded="false" aria-controls="sws" style="background-color: #005FB9;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;Southwest Service</button>
+    				</h2>
+    				<div id="sws" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList" href="station.html?id=MANHATTAN">Manhattan</a><br>
+							<a class="stationList" href="station.html?id=LARAWAY">Laraway Rd</a><br>
+							<a class="stationList" href="station.html?id=179TH-SWS">179th St. - Orland Park</a><br>
+							<a class="stationList" href="station.html?id=153RD-SWS">153rd St. - Orland Park</a><br>
+							<a class="stationList" href="station.html?id=143RD-SWS">143rd St. - Orland Park</a><br>
+							<a class="stationList" href="station.html?id=PALOSPARK">Palos Park</a><br>
+							<a class="stationList" href="station.html?id=PALOSHTS">Palos Heights</a><br>
+							<a class="stationList" href="station.html?id=WORTH">Worth</a><br>
+							<a class="stationList" href="station.html?id=CHICRIDGE">Chicago Ridge</a><br>
+							<a class="stationList" href="station.html?id=OAKLAWN">Oak Lawn</a><br>
+							<a class="stationList" href="station.html?id=ASHBURN">Ashburn</a><br>
+							<a class="stationList" href="station.html?id=WRIGHTWOOD">Wrightwood</a><br>
+							<a class="stationList" href="station.html?id=CUS">Chicago Union Station</a><br>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+		<div class="px-5 py-2 col-12 d-lg-none d-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#upn" aria-expanded="false" aria-controls="upn" style="background-color: #0D5201;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;UP-N</button>
+    				</h2>
+    				<div id="upn" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList" href="station.html?id=KENOSHA">Kenosha</a><br>
+							<a class="stationList" href="station.html?id=WINTHROP">Winthrop Harbor</a><br>
+							<a class="stationList" href="station.html?id=ZION">Zion</a><br>
+							<a class="stationList" href="station.html?id=WAUKEGAN">Waukegan</a><br>
+							<a class="stationList" href="station.html?id=NCHICAGO">North Chicago</a><br>
+							<a class="stationList" href="station.html?id=GRTLAKES">Great Lakes</a><br>
+							<a class="stationList" href="station.html?id=LAKEBLUFF">Lake Bluff</a><br>
+							<a class="stationList" href="station.html?id=LKFOREST">Lake FOrest</a><br>
+							<a class="stationList" href="station.html?id=FTSHERIDAN">Fort Sheridan</a><br>
+							<a class="stationList" href="station.html?id=HIGHWOOD">Highwood</a><br>
+							<a class="stationList" href="station.html?id=HIGHLANDPK">Highland Park</a><br>
+							<a class="stationList" href="station.html?id=RAVINIA">Ravinia</a><br>
+							<a class="stationList" href="station.html?id=RAVINIAPK">Ravinia Park</a><br>
+							<a class="stationList" href="station.html?id=BRAESIDE">Braeside</a><br>
+							<a class="stationList" href="station.html?id=GLENCOE">Glencoe</a><br>
+							<a class="stationList" href="station.html?id=HUBARDWOOD">Hubbard Woods</a><br>
+							<a class="stationList" href="station.html?id=WINNETKA">Winnetka</a><br>
+							<a class="stationList" href="station.html?id=INDIANHILL">Indian Hill</a><br>
+							<a class="stationList" href="station.html?id=KENILWORTH">Kenilworth</a><br>
+							<a class="stationList" href="station.html?id=WILMETTE">Wilmette</a><br>
+							<a class="stationList" href="station.html?id=CENTRALST">Central St. - Evanston</a><br>
+							<a class="stationList" href="station.html?id=EVANSTON">Davis St. - Evanston</a><br>
+							<a class="stationList" href="station.html?id=MAINST">Main St. - Evanston</a><br>
+							<a class="stationList" href="station.html?id=ROGERPK">Rogers Park</a><br>
+							<a class="stationList" href="station.html?id=RAVENSWOOD">Ravenswood</a><br>
+							<a class="stationList" href="station.html?id=CLYBOURN">Clybourn</a><br>
+							<a class="stationList" href="station.html?id=OTC">Ogilvie Transportation Center</a>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+		<div class="px-5 py-2 col-12 d-lg-none d-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#upnw" aria-expanded="false" aria-controls="upnw" style="background-color: #FFDE02;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;UP-NW</button>
+    				</h2>
+    				<div id="upnw" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList" href="station.html?id=MCHENRY">McHenry</a><br>
+							<hr style="margin-top:10px;margin-bottom:10px;height:3px;border-width:0;color:gray;background-color:gray"/>
+							<a class="stationList" href="station.html?id=HARVARD">Harvard</a><br>
+							<a class="stationList" href="station.html?id=WOODSTOCK">Woodstock</a><br>
+							<a class="stationList" href="station.html?id=CRYSTAL">Crystal Lake</a><br>
+							<hr style="margin-top:10px;margin-bottom:10px;height:3px;border-width:0;color:gray;background-color:gray"/>
+							<a class="stationList" href="station.html?id=PINGREE">Pingree Raod</a><br>
+							<a class="stationList" href="station.html?id=CARY">Cary</a><br>
+							<a class="stationList" href="station.html?id=FOXRG">Fox River Grove</a><br>
+							<a class="stationList" href="station.html?id=BARRINGTON">Barrington</a><br>
+							<a class="stationList" href="station.html?id=PALATINE">Palatine</a><br>
+							<a class="stationList" href="station.html?id=ARLINGTNPK">Arlington Park</a><br>
+							<a class="stationList" href="station.html?id=ARLINGTNHT">Arlington Heights</a><br>
+							<a class="stationList" href="station.html?id=MTPROSPECT">Mt. Prospect</a><br>
+							<a class="stationList" href="station.html?id=CUMBERLAND">Cumberland</a><br>
+							<a class="stationList" href="station.html?id=DESPLAINES">Des Plaines</a><br>
+							<a class="stationList" href="station.html?id=DEEROAD">Dee Road</a><br>
+							<a class="stationList" href="station.html?id=PARKRIDGE">Park Ridge</a><br>
+							<a class="stationList" href="station.html?id=EDISONPK">Edison Park</a><br>
+							<a class="stationList" href="station.html?id=NORWOODP">Norwood Park</a><br>
+							<a class="stationList" href="station.html?id=GLADSTONEP">Gladstone Park</a><br>
+							<a class="stationList" href="station.html?id=JEFFERSONP">Jefferson Park</a><br>
+							<a class="stationList" href="station.html?id=IRVINGPK">Irving Park</a><br>
+							<a class="stationList" href="station.html?id=CLYBOURN">Clybourn</a><br>
+							<a class="stationList" href="station.html?id=OTC">Ogilvie Transportation Center</a>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+		<div class="px-5 py-2 col-12 d-lg-none d-block">
+			<div class="accordion">
+  				<div class="accordion-item">
+    				<h2 class="accordion-header">
+     					<button class="text-light outln fs-3 accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#upw" aria-expanded="false" aria-controls="upw" style="background-color: #FFB3BA;font-family: Chivo">
+        				<img id="agencyLogo" class="align-top" src="../assets/arrow.png" width=10%>&nbsp;&nbsp;UP-W</button>
+    				</h2>
+    				<div id="upw" class="accordion-collapse collapse" style="line-height: 1.75">
+      					<div class="accordion-body">
+							<a class="stationList" href="station.html?id=ELBURN">Elburn</a><br>
+							<a class="stationList" href="station.html?id=LAFOX">La Fox</a><br>
+							<a class="stationList" href="station.html?id=GENEVA">Geneva</a><br>
+							<a class="stationList" href="station.html?id=WCHICAGO">West Chicago</a><br>
+							<a class="stationList" href="station.html?id=WINFIELD">Winfield</a><br>
+							<a class="stationList" href="station.html?id=WHEATON">Wheaton</a><br>
+							<a class="stationList" href="station.html?id=COLLEGEAVE">College Ave.</a><br>
+							<a class="stationList" href="station.html?id=GLENELLYN">Glen Ellyn</a><br>
+							<a class="stationList" href="station.html?id=LOMBARD">Lombard</a><br>
+							<a class="stationList" href="station.html?id=VILLAPARK">Villa Park</a><br>
+							<a class="stationList" href="station.html?id=ELMHURST">Elmhurst</a><br>
+							<a class="stationList" href="station.html?id=BERKELEY">Berkeley</a><br>
+							<a class="stationList" href="station.html?id=BELLWOOD">Bellwood</a><br>
+							<a class="stationList" href="station.html?id=MELROSEPK">Melrose Park</a><br>
+							<a class="stationList" href="station.html?id=MAYWOOD">Maywood</a><br>
+							<a class="stationList" href="station.html?id=RIVRFOREST">River Forest</a><br>
+							<a class="stationList" href="station.html?id=OAKPARK">Oak Park</a><br>
+							<a class="stationList" href="station.html?id=KEDZIE">Kedzie</a>
+							<a class="stationList" href="station.html?id=OTC">Ogilvie Transportation Center</a>
+						</div>
+      					</div>
+    				</div>
+  				</div>
+			</div>
+	</div>	
+		
+        <footer>
+            <p class="text-end px-5" style="font-family: Chivo;color: #898989">© 2023 Stormy Kara</p>
+        </footer>
+        
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+		
+        <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+        
+        <script>
+        kofiWidgetOverlay.draw('stormykara', {
+            'type': 'floating-chat',
+            'floating-chat.donateButton.text': 'Support me',
+            'floating-chat.donateButton.background-color': '#444444',
+            'floating-chat.donateButton.text-color': '#CDCDCD'
+            });
+        </script>
+        
+    </body>
+</html>

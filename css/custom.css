@@ -7,6 +7,14 @@ a {
 	font-weight: 600;
 }
 
+.stationListClosed{
+	font-family: Chivo;
+	font-weight: 600;
+	font-style: italic;
+	color: #999999;
+	text-decoration: none;
+}
+
 .outln{
 	text-shadow: 1px 1px 2px black;
 }
