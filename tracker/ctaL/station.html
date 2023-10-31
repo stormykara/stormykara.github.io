@@ -135,7 +135,8 @@
 			
 			function processTrain(train) {
 				const eta = Math.round((train.actualETA - Date.now())/60000)
-				const etaText = eta == null ? ("Delayed") : eta > 1 ? (eta + " min") : eta == -28300086 ? "No ETA" : "Due" 
+				const noETA = train.noETA
+				const etaText = noETA == true ? ("Delayed") : eta > 1 ? (eta + " min") : eta == -28300086 ? "No ETA" : "Due" 
 				return "<div onclick='showRun(this, " + train.runNumber + ")' class='ps-3 py-2' style='border-radius: 10px;background-color: #" + lineColors[train.lineCode] + "'><div class='outln' style='font-size: 12px;font-weight: 400;'>" + train.line + " Line run #" + train.runNumber + "</div><div class='fs-4 outln' style='font-weight: 600;'>" + etaText + "</div></div>"
 			}
 			
@@ -159,7 +160,8 @@
 				for (const prediction of data.predictions) {
 					const station = prediction.stationName
 					const eta = Math.round((prediction.actualETA - Date.now())/60000)
-					const etaText = eta == null ? ("Delayed") : eta > 1 ? (eta + " min") : eta == -28300086 ? "No ETA" : "Due" 
+					const noETA = prediction.noETA
+					const etaText = noETA == true ? ("Delayed") : eta > 1 ? (eta + " min") : eta == -28300086 ? "No ETA" : "Due" 
 					runInfo.innerHTML += "<div class='mt-1 me-3 py-2' style='line-height: 1.5;border-radius: 10px;background-color: #565656'><div class='outln fst-italic ps-2' style='font-weight: 600;font-size: 15px'>" + station + " - " + etaText + "</div></div>"
 				}
 			}
