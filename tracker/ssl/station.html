@@ -180,7 +180,7 @@
   				const station = data.stations[id];
 				clearOldTrains(Object.values(station.destinations).flatMap(d => d.trains).map(t => t.runNumber))
 				for (let i = 0; i < Object.keys(station.destinations).length; i++) {
-    				dest = Object.keys(station.destinations).sort((a, b) => destLine)[i]
+    				dest = Object.keys(station.destinations)[i]
 					for (const train of station.destinations[dest].trains) {
 						refreshETA(train, data.trains[train.runNumber].predictions, dest)
 					}
