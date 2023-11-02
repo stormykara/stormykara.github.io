@@ -196,7 +196,7 @@
                         .sort((a, b) => a.actualETA - b.actualETA)
                         .map((train) => processTrain(train, data.trains[train.runNumber].predictions))
                         .join("")
-    				document.getElementById("trains").innerHTML +="<div id=stn" + dest.split(' ')[0] + "><p class='fst-italic fw-bold fs-3 pt-3' style='line-height: .4'>to " + dest + "</p>" + trainInfo + "</div>"
+    				document.getElementById("trains").innerHTML +="<div id=stn" + dest.split(' ')[0] + "><p class='fst-italic fw-bold fs-3 pt-3' style='line-height: 1'>to " + dest + "</p>" + trainInfo + "</div>"
 					}
 			}
 			
