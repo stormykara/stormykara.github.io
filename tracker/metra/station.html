@@ -80,18 +80,16 @@
                 <img id="agencyLogo" class="align-top" src="../assets/metra.png" width=10%>
             </div>
 			<div id="station" class="outln pt-3 pb-2 col-6"></div>
-			<div class="col-4 p-4 d-none d-md-block text-end"> 
+			<div class="col-4 p-4 d-none d-sm-block text-end"> 
                 <a class="btn btn-outline-light fw-bold rounded-1" style="font-family: Lato;" href="index.html" role="button"><i class="bi bi-chevron-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;BACK</a>
             </div>
-			<div class="col-4 p-4 d-block d-md-none text-end"> 
-                <a class="btn btn-outline-light fw-bold rounded-1" style="font-family: Lato;" href="index.html" role="button"><i class="bi bi-chevron-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;BACK</a>
-            </div> 
         </div>
 
     <!--Content-->
 	<div class="row ps-4">
-		<p class="pt-2 text-light" style="font-size: 10px;">Last Updated:
-		<span class="text-light col-6 fst-italic" id="datetime"></span></p>
+		<p class="pt-2 text-light" style="font-size: 15px;">Last Updated:
+		<span class="text-light fst-italic" id="datetime"></span><br>
+		Click or tap on a train to see ETA for every station.</p>
 		<div class="col-10" style="font-family: Chivo;line-height: 1.2;color: #FFFFFF" id="trains"></div>
 		<div class="col-7 px-5 text-light text-end" style="font-family: Chivo;line-height: .5">
 			
@@ -105,7 +103,7 @@
 		<script>
 			const id = new URL(document.location).searchParams.get("id")
 			
-			const api_url = 'https://store.transitstat.us/metra/transitStatus/stations/' + id
+			const api_url = 'https://store.transitstat.us/metra/transitStatus'
 
 			const lineColors = {
 				'BNSF': '3DAE2C',
@@ -117,17 +115,40 @@
 				'RI': 'E1261D',
 				'SWS': '005FB9',
 				'UP-N': '0D5201',
-				'UP-NW': 'FEDE02',
+				'UP-NW': 'F5D504',
 				'UP-W': 'FEB2B9',
 			}
 			
 			const destLine = {
 			}
 			
-			function processTrain(train) {
-				const eta = Math.round((train.actualETA - Date.now())/60000)
-				const etaText = eta == null ? ("Delayed") : eta > 1 ? (eta + " min") : eta == -28300086 ? "No ETA" : "Due" 
-				return "<div onclick='showRun(this, " + train.runNumber + ")' class='ps-3 py-2' style='border-radius: 10px;background-color: #" + lineColors[train.lineCode] + "'><div class='outln' style='font-size: 12px;font-weight: 400;'>" + train.line + " Line Train #" + train.runNumber + "</div><div class='fs-4 outln' style='font-weight: 600;'>" + etaText + "</div></div>"
+			function processTrain(train, predictions) {
+				const etaText = getETAText(train.actualETA, train.noETA)
+				const runInfo = getPredictions(predictions)
+				return "<div id=run" + train.runNumber + " onclick='toggleRun(this)' class='ps-3 py-2 trainClass' style='border-radius: 10px;background-color: #" + lineColors[train.lineCode] + ";margin-bottom: 7px'><div class='outln' style='font-size: 12px;font-weight: 400;'>" + train.line + " Line Train #" + train.runNumber + "</div><div class='fs-4 outln eta' style='font-weight: 600;'>" + etaText + "</div><div class='predictions' style='display:none'>" + runInfo + "</div></div>"
+			}
+			
+			function clearOldTrains(trains){
+				for (const run of document.getElementsByClassName("trainClass")) {
+					const runNum = run.id.substring(3)
+					if (!trains.includes(runNum)) run.remove()
+				}
+			}
+			
+			function getPredictions(predictions){
+				var runInfo= ""
+				for (const prediction of predictions) {
+					const station = prediction.stationName
+					const etaText = getETAText(prediction.actualETA, prediction.noETA)
+					runInfo += "<div class='mt-1 me-3 py-2' style='line-height: 1.5;border-radius: 10px;background-color: #454545;opacity: 90%'><div class='outln fst-italic ps-2' style='font-weight: 600;font-size: 15px'>" + station + " - " + etaText + "</div></div>"
+				}
+				return runInfo
+			}
+			
+			function checkTrains(destination){
+				const a = document.getElementById("stn" + destination.split(' ')[0])
+				const display = a.getElementsByClassName("trainClass").length == 0 ? "block" : "none"
+				a.getElementsByClassName("notrain")[0].style.display = display
 			}
 			
 			async function fetchData(url) {
@@ -141,45 +162,72 @@
 				})
 			}
 			
-			async function showRun(parent, run){
-				const api_run_url = 'https://store.transitstat.us/metra/transitStatus/trains/' + run
-				const data = await fetchData(api_run_url);
-				const runInfo = document.createElement("div")
-				parent.appendChild(runInfo)
-				console.log(data)
-				for (const prediction of data.predictions) {
-					const station = prediction.stationName
-					const eta = Math.round((prediction.actualETA - Date.now())/60000)
-					const etaText = eta == null ? ("Delayed") : eta > 1 ? (eta + " min") : eta == -28300086 ? "No ETA" : "Due" 
-					runInfo.innerHTML += "<div class='mt-1 me-3 py-2' style='line-height: 1.5;border-radius: 10px;background-color: #565656'><div class='outln fst-italic ps-2' style='font-weight: 600;font-size: 15px'>" + station + " - " + etaText + "</div></div>"
-				}
+			function toggleRun(train){
+				const predictions = train.getElementsByClassName("predictions")[0]
+  				if (predictions.style.display == "none") {
+    				predictions.style.display = "block"
+  				} else {
+    				predictions.style.display = "none"
+  				}
 			}
 			
             async function getMETRA() {
-				const data = await fetchData(api_url);
-  				const trains = data.destinations.trains;
+  				const data = await fetchData(api_url);
+  				const station = data.stations[id];
 				document.getElementById("trains").innerHTML =""
-				document.getElementById("station").innerHTML ="<h2 class='fw-bold text-start text-light' style='font-size:40px'>&nbsp;&nbsp;" + data.stationName + "</h2>"
-				for (let i = 0; i < Object.keys(data.destinations).length; i++) {
-    				dest = Object.keys(data.destinations).sort((a, b) => destLine)[i]
-    				trainInfo = data.destinations[dest].trains.length == 0 ? ("<div class='ps-3 py-2' style='border-radius: 10px;background-color: #565656'>No currently tracked trains</div>") :
-						data.destinations[dest].trains
+				document.getElementById("station").innerHTML ="<h2 class='outln fw-bold text-start text-light' style='font-size:40px;'>&nbsp;&nbsp;" + station.stationName + "</h2>"
+				for (let i = 0; i < Object.keys(station.destinations).length; i++) {
+    				dest = Object.keys(station.destinations).sort((a, b) => destLine)[i]
+    				const display = station.destinations[dest].trains.length == 0 ? "block" : "none"
+					trainInfo = "<div class='ps-3 py-2 notrain' style='border-radius: 10px;background-color: #565656;display:" + display + "'>No currently tracked trains</div>"
+					trainInfo += station.destinations[dest].trains
                         .sort((a, b) => a.actualETA - b.actualETA)
-                        .map(processTrain)
-                        .join('<hr style="visibility:hidden; margin-bottom:-10px;" />')
-    				document.getElementById("trains").innerHTML +="<p class='fst-italic fw-bold fs-3 pt-3' style='line-height: .4'>" + dest + "</p><p>" + trainInfo + "</p>"
+                        .map((train) => processTrain(train, data.trains[train.runNumber].predictions))
+                        .join("")
+    				document.getElementById("trains").innerHTML +="<div id=stn" + dest.split(' ')[0] + "><p class='fst-italic fw-bold fs-3 pt-3' style='line-height: .4'>to " + dest + "</p>" + trainInfo + "</div>"
 					}
 			}
 			
+			 async function refreshMETRA() {
+  				const data = await fetchData(api_url);
+  				const station = data.stations[id];
+				clearOldTrains(Object.values(station.destinations).flatMap(d => d.trains).map(t => t.runNumber))
+				for (let i = 0; i < Object.keys(station.destinations).length; i++) {
+    				dest = Object.keys(station.destinations).sort((a, b) => destLine)[i]
+					for (const train of station.destinations[dest].trains) {
+						refreshETA(train, data.trains[train.runNumber].predictions, dest)
+					}
+				checkTrains(dest)
+				}
+			}
+			
+			function refreshETA(train, predictions, destination){
+				const runNum = document.getElementById("run" + train.runNumber)
+				if (runNum === null) {
+  					document.getElementById("stn" + destination.split(' ')[0]).innerHTML += processTrain(train, predictions)
+					return
+				}
+				const eta = runNum.getElementsByClassName("eta")[0]
+				const etaText = getETAText(train.actualETA, train.noETA)
+				eta.innerHTML = etaText
+				runNum.getElementsByClassName("predictions")[0].innerHTML = getPredictions(predictions)
+			}
+			
+			function getETAText(eta, noETA){
+				const etaTime = Math.floor((eta - Date.now())/60000)
+				const etaText = noETA == true ? ("Delayed") : etaTime > 1 ? (etaTime + " min") : etaTime == -28300086 ? "No ETA" : "Due"
+				return etaText
+			}
+			
 			function updateDateTime(){
-				const now = new Date();
+				const now = new Date(); 
 				const currentDateTime = now.toLocaleString();
 				document.querySelector('#datetime').textContent = currentDateTime;
 			}
 
 			getMETRA();
 			updateDateTime();
-            setInterval(getMETRA, 10000);
+            setInterval(refreshMETRA, 10000);
 			setInterval(updateDateTime, 10000);
         </script>
 		
