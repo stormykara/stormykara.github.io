@@ -163,7 +163,7 @@
                         .sort((a, b) => a.actualETA - b.actualETA)
                         .map(processTrain)
                         .join('<hr style="visibility:hidden; margin-bottom:-10px;" />')
-    				document.getElementById("trains").innerHTML +="<p class='fst-italic fw-bold fs-3 pt-3' style='line-height: .4'>" + dest + "</p><p>" + trainInfo + "</p>"
+    				document.getElementById("trains").innerHTML +="<p class='fst-italic fw-bold fs-3 pt-3' style='line-height: .4'>to " + dest + "</p><p>" + trainInfo + "</p>"
 					}
 			}
 			
