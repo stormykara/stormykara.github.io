@@ -96,6 +96,23 @@ a {
 .backbtn{
     width: 100px;}
 
+.lineDrop{
+	background-color: #222222;}
+.lineDrop:target{
+	background-color: #444444;}
+
+.dropdown-menu{
+	background-color: #222222;
+	border-width: thin;
+	border-color:#677078}
+
+.dropdown-item{
+	background-color: #222222;
+	color: #BBBBBB;}
+.dropdown-item:hover{
+	background-color: #575E64;
+	color: #ffffff;}
+
 /****************************************************/
 
 /* Metra Schedule Buttons CSS */

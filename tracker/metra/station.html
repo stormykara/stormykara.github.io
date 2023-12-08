@@ -173,7 +173,7 @@
 				const data = await fetchData(api_url);
   				const trains = data.destinations.trains;
 				document.getElementById("trains").innerHTML =""
-				document.getElementById("station").innerHTML ="<h2 class='fw-bold text-start text-light' style='font-size:40px'>&nbsp;&nbsp;" + data.stationName + "</h2>"
+				document.getElementById("station").innerHTML ="<h2 class='fw-bold text-start text-light' style='font-size:40px;font-family: Inter'>" + data.stationName + "</h2>"
 				for (let i = 0; i < Object.keys(data.destinations).length; i++) {
     				dest = Object.keys(data.destinations).sort((a, b) => destLine)[i]
     				trainInfo = data.destinations[dest].trains.length == 0 ? ("<div class='ps-3 py-2' style='border-radius: 10px;background-color: #565656'>No currently tracked trains</div>") :
