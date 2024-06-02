@@ -93,13 +93,11 @@
 		<p class="pt-2 text-light" style="font-size: 15px;">Last Updated:
 		<span class="text-light col-6 fst-italic" id="datetime"></span></p>
 		<div class="col-10" style="font-family: Chivo;line-height: 1.2;color: #FFFFFF" id="trains"></div>
-		<div class="col-7 px-5 text-light text-end" style="font-family: Chivo;line-height: .5">
-			
-		</div>
+		<div class="col-7 px-5 text-light text-end" style="font-family: Chivo;line-height: .5"></div>
 	</div>
 		
         <footer>
-            <p class="text-end px-5" style="font-family: Chivo;color: #898989">© 2023 Stormy Kara // HUGE THANKS to my friend Ivy for helping me get this working! // <a href="https://transitstat.us/api" target="_blank">API Used</a></p>
+            <p class="text-end px-5" style="font-family: Chivo;color: #898989">© Stormy Kara // HUGE THANKS to my friend Ivy for helping me get this working! // <a href="https://transitstat.us/api" target="_blank">API Used</a></p>
         </footer>
         
 		<script>
@@ -121,7 +119,27 @@
 				'UP-W': 'FEB2B9',
 			}
 			
-			const destLine = {}
+			const destShow = [
+				'Chicago OTC',
+				'Chicago Union Station',
+				'LaSalle Street',
+				'Millennium Station',
+				'Waukegan',
+				'Kenosha',
+				'Big Timber',
+				'Aurora',
+				'Joliet',
+				'Fox Lake',
+				'Blue Island',
+				'University Park',
+				'South Chicago (93rd)',
+				'Antioch',
+				'Manhattan',
+				'Orland Park 179th',
+				'Harvard',
+				'McHenry',
+				'Elburn',
+				]
 			
 			const textColor = {
 				'BNSF': 'FFFFFF',
@@ -175,13 +193,14 @@
 				document.getElementById("trains").innerHTML =""
 				document.getElementById("station").innerHTML ="<h2 class='fw-bold text-start text-light' style='font-size:40px;'>&nbsp&nbsp" + data.stationName + "</h2>"
 				for (let i = 0; i < Object.keys(data.destinations).length; i++) {
-    				dest = Object.keys(data.destinations).sort((a, b) => destLine)[i]
-    				trainInfo = data.destinations[dest].trains.length == 0 ? ("<div class='ps-3 py-2' style='border-radius: 10px;background-color: #565656'>No currently tracked trains</div>") :
+    				dest = Object.keys(data.destinations)[i]
+					display = data.destinations[dest].trains.length == 0 && !destShow.includes(dest) ? "display:none" : ""
+    				trainInfo = data.destinations[dest].trains.length == 0 ? ("<div class='ps-3 py-2' style='border-radius: 10px;background-color: #565656;" + display + "'>No currently tracked trains</div>") :
 						data.destinations[dest].trains
                         .sort((a, b) => a.actualETA - b.actualETA)
                         .map(processTrain)
                         .join('<hr style="visibility:hidden; margin-bottom:-10px;" />')
-    				document.getElementById("trains").innerHTML +="<p class='fst-italic fw-bold fs-3 pt-3' style='line-height: 1'>to " + dest + "</p><p>" + trainInfo + "</p>"
+    				document.getElementById("trains").innerHTML +="<p class='fst-italic fw-bold fs-3 pt-3' style='line height: 1;" + display + "'>to " + dest + "</p><p>" + trainInfo + "</p>"
 					}
 			}
 			
